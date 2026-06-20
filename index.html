@@ -6,29 +6,33 @@
 
 <title>Blue Fire Ijen Tour & Travel - Banyuwangi</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins;}
-body{background:#0b1220;color:white;}
+body{background:#0b1220;color:#fff;}
 
 /* NAV */
 nav{
-  position:fixed;top:0;width:100%;
-  background:rgba(0,0,0,0.6);
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(10,15,25,0.85);
   backdrop-filter:blur(10px);
   display:flex;
   justify-content:space-between;
-  padding:15px 8%;
+  align-items:center;
+  padding:14px 8%;
   z-index:1000;
 }
-nav h1{color:#22c55e;font-size:18px;}
-nav a{color:white;margin-left:15px;text-decoration:none;font-size:14px}
+nav h1{font-size:18px;color:#22c55e;}
+nav a{color:#fff;margin-left:18px;text-decoration:none;font-size:14px;opacity:.8}
+nav a:hover{opacity:1}
 
 /* HERO */
 .hero{
   height:100vh;
-  background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.85)),
+  background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.85)),
   url('https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1600');
   background-size:cover;
   background-position:center;
@@ -39,38 +43,45 @@ nav a{color:white;margin-left:15px;text-decoration:none;font-size:14px}
   text-align:center;
   padding:20px;
 }
-.hero h2{font-size:52px}
-.hero p{max-width:650px;opacity:.85;margin-top:10px}
+.hero h2{font-size:54px;line-height:1.2}
+.hero p{max-width:750px;margin-top:10px;opacity:.85;font-size:15px}
 .btn{
-  margin-top:20px;
+  margin-top:25px;
   background:#22c55e;
-  padding:12px 22px;
+  padding:13px 24px;
   border-radius:10px;
   text-decoration:none;
   color:white;
+  font-weight:600;
 }
 
 /* SECTION */
-section{padding:80px 8%;}
-h3{font-size:28px;margin-bottom:20px;color:#60a5fa}
+section{padding:80px 8%}
+h3{font-size:26px;margin-bottom:20px;color:#60a5fa}
 
 /* GRID */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:15px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:16px;
 }
 
+/* CARD */
 .card{
   background:#111827;
   padding:20px;
-  border-radius:15px;
+  border-radius:14px;
   border:1px solid rgba(255,255,255,0.05);
-  transition:.3s;
 }
-.card:hover{transform:translateY(-5px);background:#1f2937}
 
-.price{color:gold;margin-top:10px;font-weight:bold}
+/* INFO BOX */
+.info{
+  background:#0f172a;
+  padding:20px;
+  border-radius:12px;
+  line-height:1.7;
+  color:#d1d5db;
+}
 
 /* DESTINATION IMAGE */
 .img{
@@ -81,11 +92,22 @@ h3{font-size:28px;margin-bottom:20px;color:#60a5fa}
   margin-bottom:10px;
 }
 
-/* INFO BOX */
-.info{
-  background:#0f172a;
-  padding:20px;
-  border-radius:12px;
+/* PRICE */
+.price{
+  margin-top:10px;
+  color:#facc15;
+  font-weight:600;
+}
+
+/* HIGHLIGHT */
+.badge{
+  display:inline-block;
+  padding:4px 10px;
+  background:#1f2937;
+  border-radius:8px;
+  font-size:12px;
+  margin-bottom:10px;
+  color:#9ca3af;
 }
 
 /* FOOTER */
@@ -93,20 +115,23 @@ footer{
   text-align:center;
   padding:30px;
   background:#0f172a;
+  font-size:13px;
   opacity:.8;
 }
 
-/* WA FLOAT */
+/* WA */
 .wa{
   position:fixed;
   bottom:20px;
   right:20px;
   background:#22c55e;
-  padding:15px;
+  padding:15px 18px;
   border-radius:50px;
-  color:white;
   text-decoration:none;
+  color:white;
+  font-weight:600;
 }
+
 </style>
 </head>
 
@@ -119,29 +144,32 @@ footer{
     <a href="#about">Tentang</a>
     <a href="#dest">Destinasi</a>
     <a href="#paket">Paket</a>
+    <a href="#faq">FAQ</a>
     <a href="#kontak">Kontak</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
-  <h2>Explore Banyuwangi</h2>
+  <h2>Blue Fire Ijen Tour & Travel</h2>
   <p>
-    Blue Fire Ijen Tour & Travel menyediakan pengalaman wisata terbaik ke Ijen Blue Fire,
-    Bromo Sunrise, Tumpak Sewu, dan berbagai destinasi Jawa Timur.
+    Penyedia layanan wisata profesional di Banyuwangi. Kami menghadirkan pengalaman terbaik ke
+    Kawah Ijen Blue Fire, Bromo Sunrise, Tumpak Sewu, hingga paket private & custom trip di Jawa Timur.
   </p>
-  <a class="btn" href="#paket">Lihat Paket Tour</a>
+  <a class="btn" href="#paket">Lihat Paket & Harga</a>
 </div>
 
 <!-- ABOUT -->
 <section id="about">
   <h3>Tentang Kami</h3>
   <div class="info">
-    Blue Fire Ijen Tour & Travel adalah penyedia jasa perjalanan wisata profesional di Banyuwangi
-    yang melayani wisata domestik dan mancanegara dengan layanan:
-    Private Tour, Group Tour, Custom Trip, dan Open Trip.
+    Blue Fire Ijen Tour & Travel adalah agen perjalanan wisata lokal Banyuwangi yang berfokus pada pengalaman wisata alam terbaik di Jawa Timur.  
+    Kami melayani wisatawan domestik dan mancanegara dengan layanan profesional, aman, dan terpercaya.
     <br><br>
-    ⭐ Rating 4.5 | 🚗 Transportasi lengkap | 📍 Guide lokal berpengalaman
+    ✔ Guide lokal berpengalaman<br>
+    ✔ Transportasi nyaman & aman<br>
+    ✔ Jadwal fleksibel (private & group)<br>
+    ✔ Harga transparan tanpa biaya tersembunyi
   </div>
 </section>
 
@@ -152,21 +180,24 @@ footer{
   <div class="grid">
 
     <div class="card">
+      <div class="badge">Wajib Dikunjungi</div>
       <div class="img" style="background-image:url('https://images.unsplash.com/photo-1528127269322-539801943592');"></div>
-      <h4>Ijen Blue Fire</h4>
-      <p>Fenomena api biru kawah Ijen yang mendunia.</p>
+      <h4>Kawah Ijen Blue Fire</h4>
+      <p>Fenomena api biru langka di dunia yang hanya ada di Banyuwangi.</p>
     </div>
 
     <div class="card">
+      <div class="badge">Populer</div>
       <div class="img" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee');"></div>
-      <h4>Bromo Sunrise</h4>
-      <p>Sunrise terbaik di Gunung Bromo.</p>
+      <h4>Gunung Bromo</h4>
+      <p>Sunrise terbaik di Indonesia dengan panorama lautan pasir.</p>
     </div>
 
     <div class="card">
+      <div class="badge">Hidden Gem</div>
       <div class="img" style="background-image:url('https://images.unsplash.com/photo-1501785888041-af3ef285b470');"></div>
       <h4>Tumpak Sewu</h4>
-      <p>Air terjun terindah di Jawa Timur.</p>
+      <p>Air terjun megah yang dijuluki Niagara Indonesia.</p>
     </div>
 
   </div>
@@ -174,28 +205,47 @@ footer{
 
 <!-- PACKAGE -->
 <section id="paket">
-  <h3>Paket Tour</h3>
+  <h3>Paket Tour & Harga</h3>
 
   <div class="grid">
 
     <div class="card">
       <h4>One Day Ijen Tour</h4>
-      <p>Blue Fire + Sunrise Kawah Ijen</p>
-      <div class="price">Rp 750.000</div>
+      <p class="badge">Private / Group</p>
+      <p>Start midnight - sunrise Blue Fire Ijen</p>
+      <div class="price">Rp 750.000 / orang</div>
     </div>
 
     <div class="card">
-      <h4>3D2N Adventure</h4>
+      <h4>3D2N Adventure Package</h4>
+      <p class="badge">Best Seller</p>
       <p>Ijen + Bromo + Tumpak Sewu</p>
-      <div class="price">Rp 3.200.000</div>
+      <div class="price">Rp 3.200.000 / orang</div>
     </div>
 
     <div class="card">
-      <h4>Private Custom Trip</h4>
-      <p>Rute fleksibel sesuai request</p>
-      <div class="price">Hubungi Kami</div>
+      <h4>Custom Private Trip</h4>
+      <p class="badge">Flexible</p>
+      <p>Rute & jadwal sesuai permintaan</p>
+      <div class="price">Hubungi Admin</div>
     </div>
 
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <h3>FAQ (Pertanyaan Umum)</h3>
+
+  <div class="info">
+    <b>Apakah sudah termasuk transport?</b><br>
+    Ya, semua paket sudah termasuk transportasi wisata.<br><br>
+
+    <b>Apakah bisa private trip?</b><br>
+    Bisa, semua itinerary bisa disesuaikan.<br><br>
+
+    <b>Kapan waktu terbaik ke Ijen?</b><br>
+    Musim kemarau (April - Oktober).
   </div>
 </section>
 
@@ -205,7 +255,8 @@ footer{
 
   <div class="info">
     📞 0812-3568-3044<br>
-    📍 Banyuwangi, Jawa Timur<br><br>
+    📍 Banyuwangi, Jawa Timur<br>
+    ⭐ Rating 4.5 / 5 dari pelanggan<br><br>
 
     <a class="btn" href="https://wa.me/6281235683044?text=Saya%20ingin%20booking%20Blue%20Fire%20Ijen%20Tour">
       Booking via WhatsApp
@@ -215,11 +266,11 @@ footer{
 
 <!-- FOOTER -->
 <footer>
-  © 2026 Blue Fire Ijen Tour & Travel
+  © 2026 Blue Fire Ijen Tour & Travel - All Rights Reserved
 </footer>
 
-<!-- WA FLOAT -->
-<a class="wa" href="https://wa.me/6281235683044">Chat WA</a>
+<!-- FLOAT WA -->
+<a class="wa" href="https://wa.me/6281235683044">WhatsApp</a>
 
 </body>
 </html>
