@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Blue Fire Ijen Tour | Luxury East Java Travel</title>
+<title>Blue Fire Ijen Tour & Travel | Luxury East Java Experience</title>
 
+<meta name="description" content="Blue Fire Ijen Tour & Travel - Paket wisata Banyuwangi, Ijen Blue Fire, Bromo Sunrise, Tumpak Sewu. Private & luxury tour dengan guide profesional.">
+<meta name="keywords" content="ijen tour, bromo tour, tumpak sewu, banyuwangi travel, blue fire ijen tour, east java travel">
+
+<!-- SEO Open Graph -->
+<meta property="og:title" content="Blue Fire Ijen Luxury Travel">
+<meta property="og:description" content="Explore East Java: Ijen, Bromo, Tumpak Sewu with premium travel experience.">
+<meta property="og:type" content="website">
+
+<!-- AOS Animation -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+<!-- Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins;}
 
 body{
   background:#f8fafc;
   color:#0f172a;
-  line-height:1.6;
+  overflow-x:hidden;
 }
 
 /* NAV */
@@ -22,39 +36,57 @@ nav{
   position:fixed;
   top:0;
   width:100%;
-  background:white;
+  background:rgba(255,255,255,0.9);
+  backdrop-filter:blur(10px);
   display:flex;
   justify-content:space-between;
   padding:14px 8%;
-  border-bottom:1px solid #e5e7eb;
   z-index:1000;
+  border-bottom:1px solid #e5e7eb;
 }
 
 nav h1{color:#0ea5e9;font-size:18px;}
 nav a{margin-left:15px;text-decoration:none;color:#334155;font-size:14px}
 
-/* HERO */
+/* HERO VIDEO */
 .hero{
   height:100vh;
-  background:
-    linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.55)),
-    url('https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1600');
-  background-size:cover;
-  background-position:center;
+  position:relative;
   display:flex;
-  flex-direction:column;
-  justify-content:center;
   align-items:center;
+  justify-content:center;
   text-align:center;
   color:white;
-  padding:20px;
 }
 
-.hero h2{font-size:54px}
-.hero p{max-width:750px;margin-top:10px;opacity:.9}
+.hero video{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:-2;
+}
+
+.overlay{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.55);
+  z-index:-1;
+}
+
+.hero h2{
+  font-size:60px;
+}
+
+.hero p{
+  max-width:800px;
+  margin-top:10px;
+  opacity:0.9;
+}
 
 .btn{
-  margin-top:22px;
+  margin-top:20px;
   background:#0ea5e9;
   color:white;
   padding:14px 26px;
@@ -64,56 +96,13 @@ nav a{margin-left:15px;text-decoration:none;color:#334155;font-size:14px}
 }
 
 /* SECTION */
-section{padding:80px 8%}
+section{
+  padding:90px 8%;
+}
 
 h3{
-  font-size:28px;
+  font-size:30px;
   margin-bottom:25px;
-}
-
-/* STORY SECTION */
-.story{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:40px;
-  align-items:center;
-}
-
-.story img{
-  width:100%;
-  border-radius:16px;
-  height:350px;
-  object-fit:cover;
-}
-
-/* DEST CARDS */
-.dest-card{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
-  background:white;
-  border-radius:16px;
-  overflow:hidden;
-  margin-bottom:20px;
-  border:1px solid #e5e7eb;
-}
-
-.dest-card img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
-}
-
-.dest-content{
-  padding:20px;
-}
-
-/* PACKAGE */
-.package{
-  background:white;
-  border-radius:16px;
-  padding:20px;
-  border:1px solid #e5e7eb;
 }
 
 /* GRID */
@@ -123,7 +112,64 @@ h3{
   gap:20px;
 }
 
-/* FORM */
+/* CARD */
+.card{
+  background:white;
+  padding:22px;
+  border-radius:16px;
+  border:1px solid #e5e7eb;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* DEST CARD */
+.dest{
+  background:white;
+  border-radius:16px;
+  overflow:hidden;
+}
+
+.dest img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.dest-content{
+  padding:18px;
+}
+
+/* REVIEW */
+.review{
+  background:white;
+  padding:20px;
+  border-radius:16px;
+  border:1px solid #e5e7eb;
+}
+
+.stars{
+  color:#fbbf24;
+}
+
+/* GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:12px;
+}
+
+.gallery img{
+  width:100%;
+  border-radius:12px;
+  height:180px;
+  object-fit:cover;
+}
+
+/* BOOKING */
 input,select{
   width:100%;
   padding:12px;
@@ -138,9 +184,10 @@ footer{
   padding:30px;
   background:white;
   border-top:1px solid #e5e7eb;
+  color:#64748b;
 }
 
-/* WA */
+/* WA FLOAT */
 .wa{
   position:fixed;
   bottom:20px;
@@ -149,106 +196,113 @@ footer{
   color:white;
   padding:14px 16px;
   border-radius:50px;
-  text-decoration:none;
   font-weight:600;
+  text-decoration:none;
 }
 
-/* RESPONSIVE */
-@media(max-width:768px){
-  .story{grid-template-columns:1fr}
-  .dest-card{grid-template-columns:1fr}
-  .hero h2{font-size:38px}
-}
 </style>
+
 </head>
 
 <body>
 
 <!-- NAV -->
 <nav>
-  <h1>Blue Fire Ijen</h1>
+  <h1>Blue Fire Luxury Travel</h1>
   <div>
     <a href="#dest">Destinasi</a>
-    <a href="#package">Paket</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#review">Review</a>
     <a href="#booking">Booking</a>
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- HERO VIDEO -->
 <div class="hero">
-  <h2>Luxury East Java Experience</h2>
-  <p>Jelajahi Ijen Blue Fire, Bromo Sunrise, dan Tumpak Sewu dalam perjalanan eksklusif yang dirancang untuk pengalaman terbaik.</p>
-  <a class="btn" href="#package">Explore Packages</a>
-</div>
 
-<!-- STORY ABOUT -->
-<section>
-<div class="story">
-  <img src="https://images.unsplash.com/photo-1528127269322-539801943592">
+  <video autoplay muted loop>
+    <source src="https://cdn.coverr.co/videos/coverr-mountain-landscape-4367/1080p.mp4">
+  </video>
 
-  <div>
-    <h3>Kenapa Blue Fire Ijen?</h3>
-    <p>
-      Kami menghadirkan pengalaman perjalanan premium ke destinasi terbaik di Jawa Timur.
-      Mulai dari Kawah Ijen dengan fenomena Blue Fire, Bromo dengan sunrise terbaik,
-      hingga Tumpak Sewu yang dijuluki Niagara Indonesia.
-    </p>
+  <div class="overlay"></div>
+
+  <div data-aos="fade-up">
+    <h2>Luxury East Java Experience</h2>
+    <p>Explore Ijen Blue Fire, Bromo Sunrise, and Tumpak Sewu Waterfall with premium travel experience.</p>
+    <a class="btn" href="#booking">Book Now</a>
   </div>
-</div>
-</section>
 
-<!-- DESTINATIONS -->
+</div>
+
+<!-- DESTINASI -->
 <section id="dest">
-<h3>Destinasi Utama</h3>
-
-<div class="dest-card">
-  <img src="https://images.unsplash.com/photo-1528127269322-539801943592">
-  <div class="dest-content">
-    <h4>Kawah Ijen Blue Fire</h4>
-    <p>Fenomena api biru alami yang hanya ada di 2 lokasi dunia.</p>
-  </div>
-</div>
-
-<div class="dest-card">
-  <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
-  <div class="dest-content">
-    <h4>Gunung Bromo</h4>
-    <p>Sunrise paling ikonik di Indonesia dengan lautan pasir vulkanik.</p>
-  </div>
-</div>
-
-<div class="dest-card">
-  <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
-  <div class="dest-content">
-    <h4>Tumpak Sewu Waterfall</h4>
-    <p>Air terjun megah berbentuk setengah lingkaran seperti Niagara.</p>
-  </div>
-</div>
-
-</section>
-
-<!-- PACKAGE -->
-<section id="package">
-<h3>Paket Tour</h3>
+<h3 data-aos="fade-up">Destinasi Unggulan</h3>
 
 <div class="grid">
 
-<div class="package">
-<h4>One Day Ijen</h4>
-<p>Blue Fire + Sunrise</p>
-<b>Rp 750.000</b>
+<div class="dest card" data-aos="zoom-in">
+<img src="https://images.unsplash.com/photo-1528127269322-539801943592">
+<div class="dest-content">
+<h4>Kawah Ijen</h4>
+<p>Blue Fire phenomenon & acid crater lake.</p>
+</div>
 </div>
 
-<div class="package">
-<h4>2D1N Ijen + Bromo</h4>
-<p>Adventure combo trip</p>
-<b>Rp 1.500.000</b>
+<div class="dest card" data-aos="zoom-in">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+<div class="dest-content">
+<h4>Gunung Bromo</h4>
+<p>Sunrise terbaik di Indonesia.</p>
+</div>
 </div>
 
-<div class="package">
-<h4>3D2N East Java Tour</h4>
-<p>Ijen + Bromo + Tumpak Sewu</p>
-<b>Rp 3.200.000</b>
+<div class="dest card" data-aos="zoom-in">
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+<div class="dest-content">
+<h4>Tumpak Sewu</h4>
+<p>Niagara of Indonesia waterfall.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+<h3 data-aos="fade-up">Gallery Experience</h3>
+
+<div class="gallery">
+
+<img data-aos="fade-up" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+<img data-aos="fade-up" src="https://images.unsplash.com/photo-1528127269322-539801943592">
+<img data-aos="fade-up" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+<img data-aos="fade-up" src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e">
+
+</div>
+</section>
+
+<!-- REVIEW -->
+<section id="review">
+<h3 data-aos="fade-up">Customer Reviews</h3>
+
+<div class="grid">
+
+<div class="review" data-aos="fade-up">
+<div class="stars">★★★★★</div>
+<p>"Trip sangat profesional, Ijen Blue Fire benar-benar luar biasa!"</p>
+<b>- Andi, Jakarta</b>
+</div>
+
+<div class="review" data-aos="fade-up">
+<div class="stars">★★★★★</div>
+<p>"Pelayanan bagus, driver ramah, itinerary jelas."</p>
+<b>- Maria, Surabaya</b>
+</div>
+
+<div class="review" data-aos="fade-up">
+<div class="stars">★★★★★</div>
+<p>"Best travel experience in East Java!"</p>
+<b>- John, Singapore</b>
 </div>
 
 </div>
@@ -256,18 +310,18 @@ footer{
 
 <!-- BOOKING -->
 <section id="booking">
-<h3>Booking Sekarang</h3>
+<h3 data-aos="fade-up">Booking Sekarang</h3>
 
-<input id="name" placeholder="Nama">
-<input id="date" type="date">
+<input placeholder="Nama">
+<input type="date">
 
-<select id="package">
-  <option>One Day Ijen</option>
-  <option>2D1N Ijen + Bromo</option>
-  <option>3D2N East Java Tour</option>
+<select>
+<option>One Day Ijen</option>
+<option>2D1N Ijen + Bromo</option>
+<option>3D2N Complete Trip</option>
 </select>
 
-<input id="people" type="number" placeholder="Jumlah Peserta">
+<input type="number" placeholder="Jumlah Peserta">
 
 <button class="btn" onclick="book()">Kirim Booking via WhatsApp</button>
 
@@ -275,26 +329,19 @@ footer{
 
 <!-- FOOTER -->
 <footer>
-© 2026 Blue Fire Ijen Tour & Travel
+© 2026 Blue Fire Ijen Luxury Travel
 </footer>
 
-<!-- FLOAT WA -->
-<a class="wa" href="https://wa.me/6281235683044">Chat</a>
+<!-- WA -->
+<a class="wa" href="https://wa.me/6281235683044">WhatsApp</a>
 
+<!-- AOS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
+AOS.init();
+
 function book(){
-  let name=document.getElementById("name").value;
-  let date=document.getElementById("date").value;
-  let pack=document.getElementById("package").value;
-  let people=document.getElementById("people").value;
-
-  let msg=`Booking Blue Fire Tour
-
-Nama: ${name}
-Tanggal: ${date}
-Paket: ${pack}
-Jumlah: ${people}`;
-
+  let msg="Booking Blue Fire Luxury Travel";
   window.open("https://wa.me/6281235683044?text="+encodeURIComponent(msg));
 }
 </script>
