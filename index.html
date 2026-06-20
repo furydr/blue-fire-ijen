@@ -3,260 +3,114 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Blue Fire Ijen Travel Platform | Airbnb Style Experience</title>
-
+<title>Blue Fire Ijen Tour & Travel | Premium Banyuwangi Experience</title>
+<meta name="description" content="Paket wisata Banyuwangi, Kawah Ijen, Baluran, De Djawatan, Alas Purwo, Pulau Merah dan Bromo.">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins;}
-
-body{
-  background:#f8fafc;
-  color:#0f172a;
-}
-
-/* NAV */
-nav{
-  position:fixed;
-  top:0;
-  width:100%;
-  background:white;
-  display:flex;
-  justify-content:space-between;
-  padding:14px 8%;
-  border-bottom:1px solid #e5e7eb;
-  z-index:1000;
-}
-
-nav h1{color:#0ea5e9;font-size:18px}
-
-/* HERO */
-.hero{
-  padding:140px 8% 60px;
-  text-align:center;
-  background:linear-gradient(180deg,#e0f2fe,white);
-}
-
-.hero h2{font-size:48px}
-.hero p{max-width:700px;margin:10px auto;color:#475569}
-
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:20px;
-  padding:40px 8%;
-}
-
-/* CARD */
-.card{
-  background:white;
-  border-radius:16px;
-  overflow:hidden;
-  border:1px solid #e5e7eb;
-  cursor:pointer;
-  transition:.3s;
-}
-
-.card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 15px 40px rgba(0,0,0,0.08);
-}
-
-.card img{
-  width:100%;
-  height:200px;
-  object-fit:cover;
-}
-
-.card-content{
-  padding:16px;
-}
-
-.price{
-  color:#0ea5e9;
-  font-weight:700;
-  margin-top:8px;
-}
-
-/* MODAL */
-.modal{
-  display:none;
-  position:fixed;
-  top:0;left:0;
-  width:100%;height:100%;
-  background:rgba(0,0,0,0.6);
-  justify-content:center;
-  align-items:center;
-}
-
-.modal-content{
-  background:white;
-  padding:20px;
-  border-radius:16px;
-  width:90%;
-  max-width:400px;
-}
-
-/* BUTTON */
-button{
-  width:100%;
-  padding:12px;
-  background:#0ea5e9;
-  color:white;
-  border:none;
-  border-radius:10px;
-  margin-top:10px;
-  cursor:pointer;
-}
-
-/* REVIEW */
-.review{
-  padding:40px 8%;
-  background:white;
-}
-
-.review-box{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:15px;
-}
-
-.review-card{
-  padding:16px;
-  border:1px solid #e5e7eb;
-  border-radius:12px;
-}
-
-/* WA */
-.wa{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#22c55e;
-  color:white;
-  padding:14px;
-  border-radius:50px;
-  text-decoration:none;
-}
-
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+body{background:#f8fafc;color:#0f172a;line-height:1.7}
+nav{position:fixed;top:0;width:100%;background:#fff;display:flex;justify-content:space-between;padding:16px 6%;box-shadow:0 2px 12px rgba(0,0,0,.05);z-index:1000}
+nav a{text-decoration:none;color:#334155;margin-left:16px}
+.hero{height:100vh;background:linear-gradient(rgba(8,15,40,.55),rgba(8,15,40,.55)),url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80') center/cover;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;padding:20px}
+.hero h1{font-size:64px}
+.hero p{max-width:800px;margin:20px auto}
+.btn{display:inline-block;background:#d4af37;color:#111;padding:14px 24px;border-radius:10px;text-decoration:none;font-weight:600}
+section{padding:90px 6%}
+.title{text-align:center;margin-bottom:40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,.06)}
+.card img{width:100%;height:220px;object-fit:cover}
+.card div{padding:20px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stats h2{color:#0f2f5f}
+.review,.faq{background:#fff;padding:24px;border-radius:16px}
+footer{background:#0f172a;color:#fff;padding:50px 6%}
+input,select,textarea{width:100%;padding:12px;margin:8px 0;border:1px solid #ddd;border-radius:8px}
+button{background:#0f2f5f;color:#fff;border:none;padding:14px 20px;border-radius:8px}
+@media(max-width:768px){.hero h1{font-size:42px}.stats{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
-
 <body>
-
-<!-- NAV -->
 <nav>
-  <h1>Blue Fire Travel</h1>
+<div><b>Blue Fire Ijen</b></div>
+<div>
+<a href="#destinasi">Destinasi</a>
+<a href="#paket">Paket</a>
+<a href="#review">Review</a>
+<a href="#booking">Booking</a>
+</div>
 </nav>
 
-<!-- HERO -->
-<div class="hero">
-  <h2>Explore East Java Like Airbnb Experience</h2>
-  <p>Booking trip ke Ijen, Bromo, dan Tumpak Sewu dengan sistem modern & fleksibel.</p>
+<section class="hero">
+<div>
+<h1>Luxury Banyuwangi Travel Experience</h1>
+<p>Jelajahi Kawah Ijen, Baluran, De Djawatan, Alas Purwo, Pulau Merah dan Bromo bersama operator wisata lokal profesional.</p>
+<a class="btn" href="#booking">Booking Sekarang</a>
 </div>
+</section>
 
-<!-- DESTINATIONS -->
-<div class="grid" id="list"></div>
-
-<!-- REVIEW -->
-<div class="review">
-<h3 style="padding:0 8%;">Customer Reviews</h3>
-<div class="review-box">
-
-<div class="review-card">★★★★★ <br>"Ijen trip amazing!"</div>
-<div class="review-card">★★★★★ <br>"Bromo sunrise perfect"</div>
-<div class="review-card">★★★★★ <br>"Best travel in Java"</div>
-
+<section>
+<div class="stats">
+<div><h2>10K+</h2><p>Wisatawan</p></div>
+<div><h2>500+</h2><p>Trip</p></div>
+<div><h2>4.9★</h2><p>Rating</p></div>
+<div><h2>24/7</h2><p>Support</p></div>
 </div>
-</div>
+</section>
 
-<!-- MODAL -->
-<div class="modal" id="modal">
-  <div class="modal-content">
-    <h3 id="title"></h3>
-    <p id="desc"></p>
-    <input id="name" placeholder="Nama">
-    <input id="date" type="date">
-    <input id="people" type="number" placeholder="Jumlah Peserta">
-    <button onclick="bookNow()">Book via WhatsApp</button>
-    <button onclick="closeModal()" style="background:#ef4444;">Close</button>
-  </div>
+<section id="destinasi">
+<div class="title"><h2>Destinasi Unggulan Banyuwangi</h2></div>
+<div class="grid">
+<div class="card"><img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80"><div><h3>Kawah Ijen</h3><p>Blue Fire, sunrise dan danau kawah ikonik.</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80"><div><h3>Gunung Bromo</h3><p>Sunrise terbaik di Indonesia.</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80"><div><h3>Tumpak Sewu</h3><p>Air terjun spektakuler Jawa Timur.</p></div></div>
 </div>
+</section>
 
-<a class="wa" href="https://wa.me/6281235683044">WA</a>
+<section id="paket">
+<div class="title"><h2>Paket Wisata Populer</h2></div>
+<div class="grid">
+<div class="card"><div><h3>One Day Ijen</h3><p>Blue Fire & Sunrise</p><h2>Rp750.000</h2></div></div>
+<div class="card"><div><h3>2D1N Ijen + Baluran</h3><p>Favorit wisatawan</p><h2>Rp1.850.000</h2></div></div>
+<div class="card"><div><h3>3D2N East Java</h3><p>Ijen + Bromo + Tumpak Sewu</p><h2>Rp3.200.000</h2></div></div>
+</div>
+</section>
+
+<section id="review">
+<div class="title"><h2>Testimoni Wisatawan</h2></div>
+<div class="grid">
+<div class="review">★★★★★<br>Trip sangat profesional dan menyenangkan.</div>
+<div class="review">★★★★★<br>Ijen dan Bromo luar biasa, guide ramah.</div>
+<div class="review">★★★★★<br>Rekomendasi terbaik untuk wisata Banyuwangi.</div>
+</div>
+</section>
+
+<section id="booking">
+<div class="title"><h2>Booking Tour</h2></div>
+<form onsubmit="sendWA();return false;">
+<input id="nama" placeholder="Nama Lengkap">
+<input id="tanggal" type="date">
+<select id="paketpilih">
+<option>One Day Ijen</option>
+<option>2D1N Ijen + Baluran</option>
+<option>3D2N East Java</option>
+</select>
+<textarea id="catatan" placeholder="Catatan tambahan"></textarea>
+<button type="submit">Kirim via WhatsApp</button>
+</form>
+</section>
+
+<footer>
+<h3>Blue Fire Ijen Tour & Travel</h3>
+<p>Jl. Letjen S Parman No.107, Banyuwangi</p>
+<p>0812-3568-3044</p>
+</footer>
 
 <script>
-
-const data = [
-{
-title:"Kawah Ijen Blue Fire",
-desc:"Fenomena api biru alami + crater lake",
-price:"Rp 750.000",
-img:"https://images.unsplash.com/photo-1528127269322-539801943592"
-},
-{
-title:"Gunung Bromo Sunrise",
-desc:"Sunrise terbaik di Indonesia",
-price:"Rp 1.200.000",
-img:"https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
-},
-{
-title:"Tumpak Sewu Waterfall",
-desc:"Air terjun Niagara Indonesia",
-price:"Rp 1.500.000",
-img:"https://images.unsplash.com/photo-1501785888041-af3ef285b470"
+function sendWA(){
+const msg=`Booking Tour%0ANama: ${document.getElementById('nama').value}%0ATanggal: ${document.getElementById('tanggal').value}%0APaket: ${document.getElementById('paketpilih').value}%0ACatatan: ${document.getElementById('catatan').value}`;
+window.open('https://wa.me/6281235683044?text='+msg);
 }
-];
-
-let selected="";
-
-function render(){
-let html="";
-data.forEach((d,i)=>{
-html+=`
-<div class="card" onclick="openModal(${i})">
-<img src="${d.img}">
-<div class="card-content">
-<h3>${d.title}</h3>
-<p>${d.desc}</p>
-<div class="price">${d.price}</div>
-</div>
-</div>`;
-});
-document.getElementById("list").innerHTML=html;
-}
-
-function openModal(i){
-selected=data[i];
-document.getElementById("modal").style.display="flex";
-document.getElementById("title").innerText=selected.title;
-document.getElementById("desc").innerText=selected.desc;
-}
-
-function closeModal(){
-document.getElementById("modal").style.display="none";
-}
-
-function bookNow(){
-let name=document.getElementById("name").value;
-let date=document.getElementById("date").value;
-let people=document.getElementById("people").value;
-
-let msg=`Booking Travel
-
-Trip: ${selected.title}
-Nama: ${name}
-Tanggal: ${date}
-Peserta: ${people}`;
-
-window.open("https://wa.me/6281235683044?text="+encodeURIComponent(msg));
-}
-
-render();
-
 </script>
-
 </body>
 </html>
