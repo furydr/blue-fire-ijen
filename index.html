@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Blue Fire Ijen Tour & Travel | Premium Banyuwangi Experience</title>
+<title>Blue Fire Ijen Luxury Travel | Booking System</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -26,13 +26,12 @@ nav{
   position:fixed;
   top:0;
   width:100%;
-  background:#ffffffcc;
-  backdrop-filter:blur(10px);
+  background:white;
+  border-bottom:1px solid #e5e7eb;
   display:flex;
   justify-content:space-between;
   padding:14px 8%;
   z-index:1000;
-  border-bottom:1px solid #e5e7eb;
 }
 
 nav h1{
@@ -41,21 +40,17 @@ nav h1{
 }
 
 nav a{
-  margin-left:18px;
+  margin-left:15px;
   text-decoration:none;
   color:#334155;
   font-size:14px;
-}
-
-nav a:hover{
-  color:#0ea5e9;
 }
 
 /* HERO */
 .hero{
   height:100vh;
   background:
-    linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.9)),
+    linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.9)),
     url('https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1600');
   background-size:cover;
   background-position:center;
@@ -68,24 +63,25 @@ nav a:hover{
 }
 
 .hero h2{
-  font-size:52px;
-  color:#0f172a;
+  font-size:54px;
 }
 
 .hero p{
-  max-width:700px;
+  max-width:750px;
   margin-top:10px;
   color:#475569;
 }
 
 .btn{
-  margin-top:25px;
+  margin-top:20px;
   background:#0ea5e9;
   color:white;
   padding:13px 24px;
   border-radius:10px;
   text-decoration:none;
   font-weight:600;
+  border:none;
+  cursor:pointer;
 }
 
 /* SECTION */
@@ -96,7 +92,6 @@ section{
 h3{
   font-size:26px;
   margin-bottom:20px;
-  color:#0f172a;
 }
 
 /* GRID */
@@ -109,64 +104,46 @@ h3{
 /* CARD */
 .card{
   background:white;
-  padding:22px;
+  padding:20px;
   border-radius:14px;
   border:1px solid #e5e7eb;
-  transition:.3s;
-}
-
-.card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 10px 25px rgba(0,0,0,0.05);
-}
-
-/* BADGE */
-.badge{
-  display:inline-block;
-  padding:4px 10px;
-  background:#e0f2fe;
-  color:#0369a1;
-  border-radius:8px;
-  font-size:12px;
-  margin-bottom:10px;
 }
 
 /* PRICE */
 .price{
-  margin-top:10px;
-  font-weight:700;
   color:#0ea5e9;
+  font-weight:700;
+  margin-top:10px;
 }
 
-/* INFO BOX */
-.info{
+/* BOOKING FORM */
+form{
   background:white;
-  padding:22px;
+  padding:25px;
   border-radius:14px;
   border:1px solid #e5e7eb;
-  line-height:1.8;
-  color:#475569;
 }
 
-/* DEST IMG */
-.img{
-  height:160px;
-  border-radius:12px;
-  background-size:cover;
-  background-position:center;
-  margin-bottom:10px;
+input, select{
+  width:100%;
+  padding:12px;
+  margin:8px 0;
+  border:1px solid #e5e7eb;
+  border-radius:10px;
+  outline:none;
 }
 
 /* FOOTER */
 footer{
   text-align:center;
   padding:30px;
-  background:#ffffff;
+  background:white;
   border-top:1px solid #e5e7eb;
+  font-size:13px;
   color:#64748b;
 }
 
-/* WA */
+/* FLOAT WA */
 .wa{
   position:fixed;
   bottom:20px;
@@ -179,6 +156,15 @@ footer{
   font-weight:600;
 }
 
+.badge{
+  display:inline-block;
+  background:#e0f2fe;
+  color:#0284c7;
+  font-size:12px;
+  padding:4px 10px;
+  border-radius:8px;
+  margin-bottom:10px;
+}
 </style>
 </head>
 
@@ -186,136 +172,125 @@ footer{
 
 <!-- NAV -->
 <nav>
-  <h1>Blue Fire Ijen</h1>
+  <h1>Blue Fire Luxury Travel</h1>
   <div>
-    <a href="#about">Tentang</a>
-    <a href="#dest">Destinasi</a>
     <a href="#paket">Paket</a>
+    <a href="#booking">Booking</a>
     <a href="#kontak">Kontak</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
-  <h2>Premium Travel Experience</h2>
+  <h2>Luxury Travel Experience</h2>
   <p>
-    Blue Fire Ijen Tour & Travel menghadirkan pengalaman wisata eksklusif ke Banyuwangi, Ijen Blue Fire,
-    Bromo Sunrise, dan Tumpak Sewu dengan pelayanan profesional dan nyaman.
+    Blue Fire Ijen Tour menghadirkan pengalaman wisata premium ke Banyuwangi,
+    Ijen Blue Fire, Bromo, dan Tumpak Sewu dengan sistem booking cepat & mudah.
   </p>
-  <a class="btn" href="#paket">Explore Packages</a>
+
+  <a class="btn" href="#booking">Book Now</a>
 </div>
 
-<!-- ABOUT -->
-<section id="about">
-  <h3>Kenapa Memilih Kami</h3>
-
-  <div class="grid">
-
-    <div class="card">
-      <div class="badge">Trusted</div>
-      ⭐ Rating 4.5 dari wisatawan
-    </div>
-
-    <div class="card">
-      <div class="badge">Comfort</div>
-      Transportasi nyaman & aman
-    </div>
-
-    <div class="card">
-      <div class="badge">Professional</div>
-      Guide lokal berpengalaman
-    </div>
-
-    <div class="card">
-      <div class="badge">Flexible</div>
-      Private & custom trip tersedia
-    </div>
-
-  </div>
-</section>
-
-<!-- DESTINATION -->
-<section id="dest">
-  <h3>Destinasi Unggulan</h3>
-
-  <div class="grid">
-
-    <div class="card">
-      <div class="img" style="background-image:url('https://images.unsplash.com/photo-1528127269322-539801943592');"></div>
-      <div class="badge">Iconic</div>
-      <b>Ijen Blue Fire</b>
-      <p>Fenomena api biru alami yang hanya ada di dunia.</p>
-    </div>
-
-    <div class="card">
-      <div class="img" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee');"></div>
-      <div class="badge">Popular</div>
-      <b>Bromo Sunrise</b>
-      <p>Pemandangan matahari terbit paling terkenal di Indonesia.</p>
-    </div>
-
-    <div class="card">
-      <div class="img" style="background-image:url('https://images.unsplash.com/photo-1501785888041-af3ef285b470');"></div>
-      <div class="badge">Hidden Gem</div>
-      <b>Tumpak Sewu</b>
-      <p>Air terjun spektakuler seperti Niagara versi Indonesia.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- PACKAGE -->
+<!-- PAKET -->
 <section id="paket">
-  <h3>Paket Wisata</h3>
+  <h3>Paket Wisata Premium</h3>
 
   <div class="grid">
 
     <div class="card">
-      <div class="badge">Best Value</div>
-      <b>One Day Ijen Tour</b>
-      <p>Blue Fire + Sunrise Experience</p>
+      <span class="badge">Popular</span>
+      <h4>One Day Ijen Tour</h4>
+      <p>Blue Fire + Sunrise Kawah Ijen</p>
       <div class="price">Rp 750.000</div>
     </div>
 
     <div class="card">
-      <div class="badge">Recommended</div>
-      <b>3D2N Adventure</b>
+      <span class="badge">Best Seller</span>
+      <h4>3D2N Adventure</h4>
       <p>Ijen + Bromo + Tumpak Sewu</p>
       <div class="price">Rp 3.200.000</div>
     </div>
 
     <div class="card">
-      <div class="badge">Exclusive</div>
-      <b>Private Custom Trip</b>
-      <p>Rute sesuai keinginan Anda</p>
+      <span class="badge">Exclusive</span>
+      <h4>Private Custom Trip</h4>
+      <p>Rute fleksibel sesuai request</p>
       <div class="price">Hubungi Admin</div>
     </div>
 
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- BOOKING SYSTEM -->
+<section id="booking">
+  <h3>Booking Sekarang</h3>
+
+  <form onsubmit="sendWA(); return false;">
+
+    <input type="text" id="name" placeholder="Nama Lengkap" required>
+
+    <select id="package" required>
+      <option value="">Pilih Paket</option>
+      <option>One Day Ijen Tour</option>
+      <option>3D2N Adventure</option>
+      <option>Private Custom Trip</option>
+    </select>
+
+    <input type="date" id="date" required>
+
+    <input type="number" id="people" placeholder="Jumlah Peserta" required>
+
+    <button class="btn">Kirim Booking</button>
+
+  </form>
+</section>
+
+<!-- KONTAK -->
 <section id="kontak">
-  <h3>Kontak & Booking</h3>
+  <h3>Kontak</h3>
 
-  <div class="info">
+  <div class="card">
     📞 0812-3568-3044<br>
-    📍 Banyuwangi, Jawa Timur<br>
-    ⭐ Review pelanggan 4.5 / 5<br><br>
+    📍 Banyuwangi, Jawa Timur<br><br>
 
-    <a class="btn" href="https://wa.me/6281235683044?text=Saya%20ingin%20booking%20Blue%20Fire%20Ijen%20Tour">
-      Booking via WhatsApp
+    <a class="btn" href="https://wa.me/6281235683044">
+      Chat Admin
     </a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  © 2026 Blue Fire Ijen Tour & Travel
+  © 2026 Blue Fire Ijen Luxury Travel
 </footer>
 
-<!-- WA -->
-<a class="wa" href="https://wa.me/6281235683044">Chat</a>
+<!-- FLOAT WA -->
+<a class="wa" href="https://wa.me/6281235683044">WhatsApp</a>
+
+<!-- SCRIPT BOOKING -->
+<script>
+function sendWA(){
+
+  let name = document.getElementById("name").value;
+  let pack = document.getElementById("package").value;
+  let date = document.getElementById("date").value;
+  let people = document.getElementById("people").value;
+
+  let msg =
+`Halo Admin Blue Fire Luxury Travel
+
+Nama: ${name}
+Paket: ${pack}
+Tanggal: ${date}
+Jumlah: ${people}
+
+Saya ingin booking.`;
+
+  let url = "https://wa.me/6281235683044?text=" + encodeURIComponent(msg);
+
+  window.open(url, "_blank");
+}
+</script>
 
 </body>
 </html>
