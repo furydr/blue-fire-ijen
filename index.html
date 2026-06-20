@@ -1,149 +1,113 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Blue Fire Ijen Tour & Travel</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>Blue Fire Ijen Tour & Travel - Banyuwangi</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    body {
-      background: #0b1220;
-      color: #fff;
-    }
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins;}
+body{background:#0b1220;color:white;}
 
-    /* NAV */
-    nav {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      background: rgba(0,0,0,0.6);
-      backdrop-filter: blur(10px);
-      display: flex;
-      justify-content: space-between;
-      padding: 15px 8%;
-      z-index: 1000;
-    }
+/* NAV */
+nav{
+  position:fixed;top:0;width:100%;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);
+  display:flex;
+  justify-content:space-between;
+  padding:15px 8%;
+  z-index:1000;
+}
+nav h1{color:#22c55e;font-size:18px;}
+nav a{color:white;margin-left:15px;text-decoration:none;font-size:14px}
 
-    nav h1 {
-      font-size: 18px;
-      color: #22c55e;
-    }
+/* HERO */
+.hero{
+  height:100vh;
+  background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.85)),
+  url('https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1600');
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+}
+.hero h2{font-size:52px}
+.hero p{max-width:650px;opacity:.85;margin-top:10px}
+.btn{
+  margin-top:20px;
+  background:#22c55e;
+  padding:12px 22px;
+  border-radius:10px;
+  text-decoration:none;
+  color:white;
+}
 
-    nav a {
-      color: white;
-      margin-left: 20px;
-      text-decoration: none;
-      font-size: 14px;
-    }
+/* SECTION */
+section{padding:80px 8%;}
+h3{font-size:28px;margin-bottom:20px;color:#60a5fa}
 
-    /* HERO */
-    .hero {
-      height: 100vh;
-      background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
-      url('https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1600');
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
-    }
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
+}
 
-    .hero h2 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
+.card{
+  background:#111827;
+  padding:20px;
+  border-radius:15px;
+  border:1px solid rgba(255,255,255,0.05);
+  transition:.3s;
+}
+.card:hover{transform:translateY(-5px);background:#1f2937}
 
-    .hero p {
-      max-width: 600px;
-      opacity: 0.8;
-    }
+.price{color:gold;margin-top:10px;font-weight:bold}
 
-    .btn {
-      margin-top: 20px;
-      padding: 12px 22px;
-      background: #22c55e;
-      color: white;
-      border-radius: 10px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
+/* DESTINATION IMAGE */
+.img{
+  height:160px;
+  border-radius:12px;
+  background-size:cover;
+  background-position:center;
+  margin-bottom:10px;
+}
 
-    .btn:hover {
-      background: #16a34a;
-      transform: scale(1.05);
-    }
+/* INFO BOX */
+.info{
+  background:#0f172a;
+  padding:20px;
+  border-radius:12px;
+}
 
-    section {
-      padding: 80px 8%;
-    }
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  background:#0f172a;
+  opacity:.8;
+}
 
-    h3 {
-      font-size: 28px;
-      margin-bottom: 20px;
-      color: #60a5fa;
-    }
-
-    /* GRID */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-    }
-
-    .card {
-      background: #111827;
-      padding: 20px;
-      border-radius: 15px;
-      transition: 0.3s;
-      border: 1px solid rgba(255,255,255,0.05);
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-      background: #1f2937;
-    }
-
-    .price {
-      margin-top: 10px;
-      color: gold;
-      font-weight: bold;
-    }
-
-    /* FOOTER */
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #0f172a;
-      font-size: 14px;
-      opacity: 0.8;
-    }
-
-    /* WHATSAPP */
-    .wa {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #22c55e;
-      padding: 15px;
-      border-radius: 50px;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-  </style>
+/* WA FLOAT */
+.wa{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#22c55e;
+  padding:15px;
+  border-radius:50px;
+  color:white;
+  text-decoration:none;
+}
+</style>
 </head>
 
 <body>
@@ -152,7 +116,8 @@
 <nav>
   <h1>Blue Fire Ijen</h1>
   <div>
-    <a href="#about">About</a>
+    <a href="#about">Tentang</a>
+    <a href="#dest">Destinasi</a>
     <a href="#paket">Paket</a>
     <a href="#kontak">Kontak</a>
   </div>
@@ -161,29 +126,61 @@
 <!-- HERO -->
 <div class="hero">
   <h2>Explore Banyuwangi</h2>
-  <p>Blue Fire Ijen Tour & Travel - Paket wisata profesional: Ijen, Bromo, Tumpak Sewu, dan Private Trip.</p>
-  <a href="#paket" class="btn">Lihat Paket Tour</a>
+  <p>
+    Blue Fire Ijen Tour & Travel menyediakan pengalaman wisata terbaik ke Ijen Blue Fire,
+    Bromo Sunrise, Tumpak Sewu, dan berbagai destinasi Jawa Timur.
+  </p>
+  <a class="btn" href="#paket">Lihat Paket Tour</a>
 </div>
 
 <!-- ABOUT -->
 <section id="about">
-  <h3>Kenapa Memilih Kami</h3>
-  <div class="grid">
-    <div class="card">⭐ Rating 4.5+ Trusted Travel</div>
-    <div class="card">🚗 Private & Group Tour</div>
-    <div class="card">📍 Local Expert Guide</div>
-    <div class="card">💰 Harga Transparan</div>
+  <h3>Tentang Kami</h3>
+  <div class="info">
+    Blue Fire Ijen Tour & Travel adalah penyedia jasa perjalanan wisata profesional di Banyuwangi
+    yang melayani wisata domestik dan mancanegara dengan layanan:
+    Private Tour, Group Tour, Custom Trip, dan Open Trip.
+    <br><br>
+    ⭐ Rating 4.5 | 🚗 Transportasi lengkap | 📍 Guide lokal berpengalaman
   </div>
 </section>
 
-<!-- PAKET -->
-<section id="paket">
-  <h3>Paket Tour</h3>
+<!-- DESTINATION -->
+<section id="dest">
+  <h3>Destinasi Favorit</h3>
+
   <div class="grid">
 
     <div class="card">
-      <h4>One Day Ijen</h4>
-      <p>Blue Fire Experience</p>
+      <div class="img" style="background-image:url('https://images.unsplash.com/photo-1528127269322-539801943592');"></div>
+      <h4>Ijen Blue Fire</h4>
+      <p>Fenomena api biru kawah Ijen yang mendunia.</p>
+    </div>
+
+    <div class="card">
+      <div class="img" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee');"></div>
+      <h4>Bromo Sunrise</h4>
+      <p>Sunrise terbaik di Gunung Bromo.</p>
+    </div>
+
+    <div class="card">
+      <div class="img" style="background-image:url('https://images.unsplash.com/photo-1501785888041-af3ef285b470');"></div>
+      <h4>Tumpak Sewu</h4>
+      <p>Air terjun terindah di Jawa Timur.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- PACKAGE -->
+<section id="paket">
+  <h3>Paket Tour</h3>
+
+  <div class="grid">
+
+    <div class="card">
+      <h4>One Day Ijen Tour</h4>
+      <p>Blue Fire + Sunrise Kawah Ijen</p>
       <div class="price">Rp 750.000</div>
     </div>
 
@@ -194,31 +191,35 @@
     </div>
 
     <div class="card">
-      <h4>Custom Trip</h4>
-      <p>Rancang perjalanan sendiri</p>
-      <div class="price">Flexible</div>
+      <h4>Private Custom Trip</h4>
+      <p>Rute fleksibel sesuai request</p>
+      <div class="price">Hubungi Kami</div>
     </div>
 
   </div>
 </section>
 
-<!-- KONTAK -->
+<!-- CONTACT -->
 <section id="kontak">
-  <h3>Kontak</h3>
-  <div class="card">
-    📞 0812-3568-3044<br><br>
+  <h3>Kontak & Booking</h3>
+
+  <div class="info">
+    📞 0812-3568-3044<br>
     📍 Banyuwangi, Jawa Timur<br><br>
-    <a class="btn" href="https://wa.me/6281235683044">Chat WhatsApp</a>
+
+    <a class="btn" href="https://wa.me/6281235683044?text=Saya%20ingin%20booking%20Blue%20Fire%20Ijen%20Tour">
+      Booking via WhatsApp
+    </a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  © 2026 Blue Fire Ijen Tour & Travel - All Rights Reserved
+  © 2026 Blue Fire Ijen Tour & Travel
 </footer>
 
-<!-- FLOAT WA -->
-<a class="wa" href="https://wa.me/6281235683044">WhatsApp</a>
+<!-- WA FLOAT -->
+<a class="wa" href="https://wa.me/6281235683044">Chat WA</a>
 
 </body>
 </html>
